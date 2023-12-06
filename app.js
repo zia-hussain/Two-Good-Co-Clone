@@ -138,34 +138,135 @@ function loadingAnimation(){
 }
 loadingAnimation()
 
+// You can animate the all cards by this function and array method :)
 
-function cursorAnimation(){
-   document.addEventListener("mousemove",function(dets){
 
-      gsap.to('#cursor',{
-         left:dets.x,
-         top:dets.y
-      })
+// function cursorAnimation() {
+//   document.addEventListener("mousemove", function (dets) {
+//     gsap.to("#cursor", {
+//       left: dets.x,
+//       top: dets.y,
+//     });
+//   });
    
+//    document.querySelectorAll(".child").forEach(function (elem) {
+//       elem.addEventListener("mouseenter", function () {
+//         gsap.to("#cursor", {
+//           transform: "translate(-50%,-50%) scale(1)",
+//         });
+//       });
+//       elem.addEventListener("mouseleave", function () {
+//         gsap.to("#cursor", {
+//           transform: "translate(-50%,-50%) scale(0)",
+//         });
+//       });
+//     });
+//   }
+//   cursorAnimation();
+
+
+
+// +++++++++++++++++++              First Card             ++++++++++++++++++++++++++ //
+  document.addEventListener("mousemove", function (dets) {
+    gsap.to("#cursor", {
+      left: dets.x,
+      top: dets.y,
+    });
+  });
+   
+  document.querySelector("#child1").addEventListener("mouseenter",function(){
+   gsap.to("#cursor",{
+      backgroundColor:"#8c7f77",
+      transform: 'translate(-50%,-50%) scale(1)'
+    })
+  })
+
+  document.querySelector("#child1").addEventListener("mouseleave",function(){
+    gsap.to("#cursor",{
+      transform: 'translate(-50%,-50%) scale(0)'
+    })
+  })
+
+// ++++++++++++++++++   Second +++++++++++++==
+  
+  document.addEventListener("mousemove", function (dets) {
+   gsap.to("#cursor", {
+     left: dets.x,
+     top: dets.y,
+   });
+ });
+  
+ document.querySelector("#child2").addEventListener("mouseenter",function(){
+  gsap.to("#cursor",{
+   backgroundColor:"#b5ffcc",
+     transform: 'translate(-50%,-50%) scale(1)'
    })
-   
-   document.querySelectorAll(".child").forEach(function (elem) {
-      elem.addEventListener("mousemove" ,function (){
-         gsap.to("#cursor" , {
-       transform: 'translate(-50%,-50%) scale(1)'
-            
-         })
-      });
-      elem.addEventListener("mouseleave" ,function (){
-         gsap.to("#cursor" , {
-       transform: 'translate(-50%,-50%) scale(0)'
-            
-         })
-      });
+ })
+
+ document.querySelector("#child2").addEventListener("mouseleave",function(){
+   gsap.to("#cursor",{
+     transform: 'translate(-50%,-50%) scale(0)'
    })
-   
-}
-cursorAnimation()
+ })
+
+
+ //++++++++++++++++++++++    Third     +++++++++++++++
+
+
+
+ document.addEventListener("mousemove", function (dets) {
+   gsap.to("#cursor", {
+     left: dets.x,
+     top: dets.y,
+   });
+ });
+  
+ document.querySelector("#child3").addEventListener("mouseenter",function(){
+  gsap.to("#cursor",{
+   backgroundColor:"#F7F7F7",
+     transform: 'translate(-50%,-50%) scale(1)'
+   })
+ })
+
+ document.querySelector("#child3").addEventListener("mouseleave",function(){
+   gsap.to("#cursor",{
+     transform: 'translate(-50%,-50%) scale(0)'
+   })
+ })
+
+
+
+ //   +++++++++++++++++++++   Fourth ++++++++++++++++++++++++
+
+
+ document.addEventListener("mousemove", function (dets) {
+   gsap.to("#cursor", {
+     left: dets.x,
+     top: dets.y,
+   });
+ });
+  
+ document.querySelector("#child4").addEventListener("mouseenter",function(){
+  gsap.to("#cursor",{
+   backgroundColor:"#dcdde1",
+     transform: 'translate(-50%,-50%) scale(1)'
+   })
+ })
+
+ document.querySelector("#child4").addEventListener("mouseleave",function(){
+   gsap.to("#cursor",{
+     transform: 'translate(-50%,-50%) scale(0)'
+   })
+ })
+
+
+ //     ++++++++++++++++++++  Textillate .js ++++++++++++++++++++++++++  //
+
+
+
+ 
+
+
 
 
 

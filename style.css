@@ -20,7 +20,7 @@ html,body{
     width: 100%;
     /* background-color: wheat; */
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
     padding: 25px;
     display: flex;
     align-items: flex-start;
@@ -32,7 +32,11 @@ html,body{
     overflow: hidden;
 }
 #nav-part1 svg{
+    margin-top: 0px;
     display: block;
+}
+#secondsvg{
+    height: 80px;
 }
 #nav-part2{
     display: flex;
@@ -63,14 +67,14 @@ html,body{
   font-weight: 100;
 }
 
-#cursor{
-    height: 150px;
-    width: 150px;
-    z-index: 9;
-    background-color:yellow;
+#cursor {
+    height: 250px;
+    width: 250px;
+    /* background-color: rgba(224, 139, 189, 0.814); */
     border-radius: 50%;
     position: fixed;
-    transform: translate(-50%,-50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+
 }
 
 #page1{
@@ -126,7 +130,7 @@ transform: scale(0);
 
 #page2{
     min-height: 100vh;
-    background-color: #F7F7F7;
+    /* background-color: #fff; */
     width: 100%;
 position: relative;
 display: flex;
@@ -157,17 +161,136 @@ align-items: center;
     height: 50px;
     width: 80%;
     position: absolute;
-    background-color: pink;
-    border-radius: 50px;
+    background-color: rgb(229, 240, 214);
+    border-radius: 25px;
+    z-index: 99;
 }
+.elem #det1{
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: height 0.3s , opacity 0.3s;
+    opacity: 0;
+}
+.elem #det2{
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: height 0.3s , opacity 0.3s;
+    opacity: 0;
+}
+.elem #det3{
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: height 0.3s , opacity 0.3s;
+    opacity: 0;
+}
+.elem .dets #circle{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.elem .dets{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+}
+.elem .dets p{
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 100;
+
+}
+.elem .dets h3{
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+.dets:hover #det1{
+    opacity: 1;
+    background-color: rgb(229, 240, 214);
+    height: 300px;
+    border-radius: 34px;
+    z-index: -9;
+}
+.dets:hover #det2{
+    opacity: 1;
+    background-color: rgb(229, 240, 214);
+    height: 300px;
+    border-radius: 34px;
+    z-index: -9;
+}
+.dets:hover #det3{
+    opacity: 1;
+    background-color: rgb(229, 240, 214);
+    height: 300px;
+    border-radius: 34px;
+    z-index: -9;
+}
+
+#innerdets{
+    display: flex;
+}
+#firstdet p{
+    margin-left: 20px;
+   text-align: center;
+   margin-top: 5px;
+
+}
+.elem #det1 img{
+    margin-top: 70px;
+    padding-left: 40px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    
+}
+.elem #det2 img{
+    margin-top: 70px;
+    padding-left: 40px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.elem #det3 img{
+    margin-top: 70px;
+    padding-left: 40px;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    
+}
+.elem #det3 p{
+    margin-top: -5px;
+}
+
+.elem #seconddet img{
+    margin-top: 50px;
+    padding-left: 80px;
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+}
+.elem #seconddet p{
+   margin-top: -15px;
+   margin-left: 40px;
+   text-align: center;
+}
+
 #page3{
     min-height: 120vh;
     width: 100%;
-    background-color: #F7F7F7;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
     
 }
 .child{
@@ -177,14 +300,137 @@ align-items: center;
    display: flex;
    justify-content: center;
    align-items: center;
-   z-index: 80979879;
+   /* z-index: 80979879; */
 }
 .child img{
-   z-index: 999;
+   /* z-index: 999; */
     height: 100%;
+}
+.child{
+margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+.child #first{
+    margin-top: 40px;
+    /* background-color: aliceblue; */
+}
+.child p{
+    text-transform: uppercase;
+    color: #333;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+.goods{
+    min-height: 120vh;
+    width: 100%;
+    /* background-color: #F7F7F7; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+#content{
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+#content #left-content{
+    flex-basis: 50%;
+    /* background-color: #F7F7F7; */
+
+}
+#content #left-content h1{
+    font-family:'Futura';
+    font-size: 3.8vw;
+    letter-spacing: -2px;
+    line-height: 8vh;
+   padding-left: 25px;
+   padding-top: 25px;
+}
+#content #right-content{
+    flex-basis: 35%;
+    /* background: #F7F7F7; */
+    position: relative;
+}
+#content #right-content p{
+    width: 70%;
+word-spacing: 2px;
+margin-top: 20px;
+line-height: 25px;
+}
+#content #right-content a{
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    word-spacing: 5px;
+ position: absolute;
+ margin-top: 40px;
+ font-size: 13px;
+padding: 5px;
+border-bottom: 1px solid #333;
+}
+#content #right-content a:hover{
+    border-bottom: none;
 }
 
 @media (max-width:600px){
+
+    #nav {
+        /* height: 100px; */
+        width: 100%;
+        background-color: burlywood;
+        position: fixed;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px 15px;
+    }
+
+    #nav #nav-part2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    #links {
+        padding: 10px;
+        display: none;
+    }
+
+    #nav-part1 {
+        height: 67px;
+        overflow: hidden;
+    }
+
+    #nav-part1 svg {
+        display: block;
+        height: 67px;
+        width: 80px;
+    }
+    #nav #secondsvg{
+        height: 40px;
+        margin-left: -20px;
+        margin-top: 15px;
+    }
+
+    #icons {
+        padding: 7px;
+        border-radius: 50px;
+        background-color: #F7F7F7;
+    }
+
+    #nav-part2 #icons i {
+        font-size: 15px;
+        margin: 0 20px;
+        font-weight: 100;
+    }
+
+
     #page1{
         min-height: 70vh;
         width: 100%;
@@ -227,5 +473,92 @@ transform: translate(-50%,-50%);
         /* background-color: red; */
         overflow: hidden;
         margin-bottom: 3vw;
+    }
+
+    #content{
+        height: 40vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #content #left-content{
+        flex-basis: 50%;
+        flex-wrap: wrap;
+        /* background-color: #F7F7F7; */
+        display: flex;
+justify-content: center;
+    
+    }
+    #content #left-content h1{
+        font-family:'Futura';
+        font-size: 5.8vw;
+        letter-spacing: -2px;
+        line-height: 8vh;
+       padding-left: 25px;
+       padding-top: 25px;
+       text-align: center;
+
+/* width: 80%; */
+
+    }
+    #content #right-content{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+    }
+    #content #right-content p{
+    font-family: sans-serif;
+        font-size: 16px;
+        width: 100%;
+        padding-inline: 10px;
+        text-align: center;
+    word-spacing: 1px;
+    line-height: 25px;
+    }
+    #content #right-content a{
+        font-family: sans-serif;
+     position: absolute;
+     top: 90%;
+     font-size: 13px;
+    padding: 5px;
+    border-bottom: 1px solid #333;
+    }
+    #content #right-content a:hover{
+        border-bottom: none;
+    }
+
+
+    #page3 {
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        /* flex-wrap: wrap; */
+    }
+
+    .child {
+        /* display: grid; */
+        height: 54vh;
+        width: 88vw;
+        /* background-color: red; */
+        /* border: 2px solid #000; */
+        position: relative;
+        padding: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .child img {
+        height: 100%;
+    }
+}
+@media (max-width:500px){
+    .goods{
+        margin-top: 120px;
     }
 }
